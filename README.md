@@ -1,24 +1,11 @@
-# README
+# 顧客管理ツール「CMANAGER」
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
 
-Things you may want to cover:
+## サイトテーマ
 
-* Ruby version
+## テーマを選んだ理由
 
-* System dependencies
+## ターゲットユーザー
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 主な利用シーン
