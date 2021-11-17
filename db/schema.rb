@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(version: 2021_11_17_144232) do
     t.string "address"
     t.string "telephone_number"
     t.string "email"
+    t.text "introduction"
+    t.integer "industry_id", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
