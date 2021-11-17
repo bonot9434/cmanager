@@ -7,6 +7,8 @@ class CreateClients < ActiveRecord::Migration[5.2]
       t.string "address"
       t.string "telephone_number"
       t.string "email"
+      t.text "introduction"
+      t.integer "industry_id", default: 0
 
       t.timestamps
     end
