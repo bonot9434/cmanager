@@ -1,0 +1,9 @@
+<div class="container">
+  <%= form_with model: @user, local:true do |f| %>
+    <div><%= f.label "Name" %></div>
+    <div><%= f.text_field :name %></div>
+    <div>
+      <%= f.submit "編集完了" %>
+    </div>
+  <% end %>
+</div>
