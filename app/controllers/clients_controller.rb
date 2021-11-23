@@ -15,7 +15,6 @@ class ClientsController < ApplicationController
 
   def show
     @client = Client.find(params[:id])
-
   end
 
   def index
@@ -23,12 +22,22 @@ class ClientsController < ApplicationController
   end
 
   def edit
+    @client = Client.find(params[:id])
   end
 
   def update
+    @client = Client.find(params[:id])
+    if @client.update(client_params)
+      redirect_to client_path(@client)
+    else
+      render:edit
+    end
   end
 
   def destroy
+    @client = Client.find(params[:id])
+    @client.destroy
+    redirect_to clients_path
   end
 
   private
