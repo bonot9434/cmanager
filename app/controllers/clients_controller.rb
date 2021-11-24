@@ -42,7 +42,7 @@ class ClientsController < ApplicationController
 
   private
   def client_params
-    params.require(:client).permit(:name, :postal_code, :address, :telephone_number, :email, :introduction)
+    params.require(:client).permit(:name, :postal_code, :address, :telephone_number, :email, :introduction, :latitude, :longitude)
   end
 
 end

@@ -6,3 +6,47 @@
 <div><%= @client.introduction %></div>
 <%= link_to "Edit", edit_client_path(@client) %></div>
 <%= link_to "Destroy", client_path(@client), method: :delete %></div>
+
+
+
+
+<style type="text/css">
+  #map { height: 400px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:left;
+    width: 80%;}
+</style>
+<div id="map"></div>
+
+<script type="text/javascript">
+    function initMap() {
+
+        var location ={lat: <%= @client.latitude %>, lng: <%= @client.longitude %>};
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 15,
+            center: location
+        });
+        var transitLayer = new google.maps.TransitLayer();
+        transitLayer.setMap(map);
+
+        var contentString = '住所：<%= @client.address %>';
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString
+        });
+
+        var marker = new google.maps.Marker({
+            position:location,
+            map: map,
+            title: contentString
+        });
+
+        marker.addListener('click', function() {
+            infowindow.open(map, marker);
+        });
+    }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDhQ--veyoMecQM_7P9QeW3fI2tA0aBSqM&callback=initMap">
+</script>
+
