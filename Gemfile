@@ -68,3 +68,4 @@ gem "geocoder"
 gem "dotenv-rails"
 
 gem 'devise'
+gem 'simple_calendar', '~> 2.0'
